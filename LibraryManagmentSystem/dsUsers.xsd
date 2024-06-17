@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsUsers" targetNamespace="http://tempuri.org/dsUsers.xsd" xmlns:mstns="http://tempuri.org/dsUsers.xsd" xmlns="http://tempuri.org/dsUsers.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsUsers" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsUsers" msprop:Generator_DataSetName="dsUsers">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LibraryUsers" msprop:Generator_RowEvHandlerName="LibraryUsersRowChangeEventHandler" msprop:Generator_RowDeletedName="LibraryUsersRowDeleted" msprop:Generator_RowDeletingName="LibraryUsersRowDeleting" msprop:Generator_RowEvArgName="LibraryUsersRowChangeEvent" msprop:Generator_TablePropName="LibraryUsers" msprop:Generator_RowChangedName="LibraryUsersRowChanged" msprop:Generator_RowChangingName="LibraryUsersRowChanging" msprop:Generator_TableClassName="LibraryUsersDataTable" msprop:Generator_RowClassName="LibraryUsersRow" msprop:Generator_TableVarName="tableLibraryUsers" msprop:Generator_UserTableName="LibraryUsers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="L_id" msprop:Generator_ColumnPropNameInRow="L_id" msprop:Generator_ColumnPropNameInTable="L_idColumn" msprop:Generator_ColumnVarNameInTable="columnL_id" msprop:Generator_UserColumnName="L_id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="L_name" msprop:Generator_ColumnPropNameInRow="L_name" msprop:Generator_ColumnPropNameInTable="L_nameColumn" msprop:Generator_ColumnVarNameInTable="columnL_name" msprop:Generator_UserColumnName="L_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="L_address" msprop:Generator_ColumnPropNameInRow="L_address" msprop:Generator_ColumnPropNameInTable="L_addressColumn" msprop:Generator_ColumnVarNameInTable="columnL_address" msprop:Generator_UserColumnName="L_address">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="L_phone" msprop:Generator_ColumnPropNameInRow="L_phone" msprop:Generator_ColumnPropNameInTable="L_phoneColumn" msprop:Generator_ColumnVarNameInTable="columnL_phone" msprop:Generator_UserColumnName="L_phone" type="xs:long" />
+              <xs:element name="L_email" msprop:Generator_ColumnPropNameInRow="L_email" msprop:Generator_ColumnPropNameInTable="L_emailColumn" msprop:Generator_ColumnVarNameInTable="columnL_email" msprop:Generator_UserColumnName="L_email">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LibraryUsers" />
+      <xs:field xpath="mstns:L_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

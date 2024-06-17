@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49986540-7BB3-4D50-BE63-D0B0A9AC805C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LibraryManagmentSystem</RootNamespace>
+    <AssemblyName>LibraryManagmentSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.4.3.0\lib\net463\System.Runtime.InteropServices.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBooks.Designer.cs">
+      <DependentUpon>AddBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsUsers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsUsers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmpDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpDashboard.Designer.cs">
+      <DependentUpon>EmpDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllBooksIssued&amp;Return.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllBooksIssued&amp;Return.Designer.cs">
+      <DependentUpon>AllBooksIssued&amp;Return.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IssueBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueBooks.Designer.cs">
+      <DependentUpon>IssueBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchUsers.Designer.cs">
+      <DependentUpon>SearchUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReturnBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnBooks.Designer.cs">
+      <DependentUpon>ReturnBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchBooks.Designer.cs">
+      <DependentUpon>SearchBooks.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddBooks.resx">
+      <DependentUpon>AddBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpDashboard.resx">
+      <DependentUpon>EmpDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllBooksIssued&amp;Return.resx">
+      <DependentUpon>AllBooksIssued&amp;Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssueBooks.resx">
+      <DependentUpon>IssueBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchUsers.resx">
+      <DependentUpon>SearchUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReturnBooks.resx">
+      <DependentUpon>ReturnBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchBooks.resx">
+      <DependentUpon>SearchBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dsUsers.xsc">
+      <DependentUpon>dsUsers.xsd</DependentUpon>
+    </None>
+    <None Include="dsUsers.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsUsers.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsUsers.xss">
+      <DependentUpon>dsUsers.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background registration 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background registration 11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchBooks.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-books-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-sign-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-book-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-return-book-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-user-male-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-book-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-books-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-book-philosophy-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-books-502.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hello-2488.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bookmark-book-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bookmark-book-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-31622581099nxsta8ruck-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forgot-password-icon-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background registration 12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background registration 13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search1.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
